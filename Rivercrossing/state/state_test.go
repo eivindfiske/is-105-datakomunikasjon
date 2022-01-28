@@ -1,19 +1,27 @@
 package state_test
 
-// starter på west siden
-var KyllingWest = true
-var RevWest = true
-var KornWest = true
-var MannWest = true
+import (
+	"testing"
 
-//båten
-var KyllingBoat = false
-var RevBoat = false
-var KornBoat = false
-var MannBoat = false
+	"main.go/event"
+	"main.go/state"
+)
 
-//avslutter på øst siden
-var KyllingEast = false
-var RevEast = false
-var KornEast = false
-var MannEast = false
+func Test_state(t *testing.T) {
+	event.KyllingtoEast()
+	wanted := true
+	state := state.KyllingEast
+
+	if state != wanted {
+		t.Errorf("Error")
+	}
+}
+func Test_state2(t *testing.T) {
+	event.KyllingtoBoat()
+	wanted := true
+	state := state.KyllingEast
+
+	if state != wanted {
+		t.Errorf("Error")
+	}
+}
