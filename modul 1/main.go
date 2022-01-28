@@ -1,7 +1,11 @@
 package main
 
-import "github.com/eivindfiske/Modul-1-opg-2/tree/main/modul%201/myquotes"
+import (
+	"fmt"
+
+	"github.com/stinawest/Del2/myquote"
+)
 
 func main() {
-	myquotes.M()
+	fmt.Println(myquote.Quote())
 }
